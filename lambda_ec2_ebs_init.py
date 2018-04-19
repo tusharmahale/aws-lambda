@@ -8,7 +8,7 @@ def lambda_handler(event, context):
 	rs_ec2 = session.resource('ec2')
 	cl_ec2 = session.client('ec2')
 	cl_s3 = session.client('s3')
-	cl_s3.download_file('tusharmahale.in','scripts/key.pem', '/tmp/key.pem')
+	cl_s3.download_file('XXXX','XXX/key.pem', '/tmp/key.pem')
 	
 	k = paramiko.RSAKey.from_private_key_file("/tmp/key.pem")
 	c = paramiko.SSHClient()
